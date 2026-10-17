@@ -31,7 +31,7 @@ Made by **Dorrmant** · MIT licensed
 **Linux / macOS:**
 
 ```bash
-git clone https://github.com/<your-username>/tiktok-streak-control-center.git
+git clone https://github.com/dorrmant/tiktok-streak-control-center.git
 cd tiktok-streak-control-center
 bash install.sh
 bash run.sh
