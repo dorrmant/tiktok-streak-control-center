@@ -72,7 +72,7 @@ def banner(w):
     print(rgb(VIOLET, '╰' + '─' * (w - 2) + '╯'))
 
 def footer(w):
-    msg = '✦  designed & built with ♥ by Dorrmant  ✦'
+    msg = '✦  designed & built ♥ by Dorrmant  ✦'
     print(' ' * ((w - len(msg)) // 2) + gradient(msg))
 
 def _typed_line():
