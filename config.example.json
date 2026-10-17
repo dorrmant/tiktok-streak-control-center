@@ -1,0 +1,11 @@
+{
+  "pc_port": 8765,
+  "phone_port": 8766,
+  "usernames": [],
+  "message": "",
+  "interval_hours": 12,
+  "debug_port": 9222,
+  "profile_dir": "",
+  "wait_after_profile_load_seconds": 3,
+  "wait_after_message_click_seconds": 5
+}
