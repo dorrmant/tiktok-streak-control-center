@@ -1,0 +1,8 @@
+config.json
+.bot-runtime-config.json
+bot/config.json
+browser-data/
+.venv/
+__pycache__/
+*.pyc
+*.log
