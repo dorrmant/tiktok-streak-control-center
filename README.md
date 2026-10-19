@@ -115,8 +115,6 @@ Issues and pull requests are welcome. Please keep personal data (usernames, pass
 
 ---
 
-<div align="center">
 
-<img src="docs/tutorial/outro-and-qr.png" alt="Scan the QR code to open the project on GitHub" width="380">
 
 </div>
