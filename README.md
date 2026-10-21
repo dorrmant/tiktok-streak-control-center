@@ -1,6 +1,4 @@
-<div align="center">
-
-<img src="docs/tutorial/intro.png" alt="Streak Control Center – visual guide" width="420">
+[![Streak Control Center – visual guide](https://github.com/dorrmant/tiktok-streak-control-center/raw/main/docs/tutorial/intro.png)](https://github.com/dorrmant/tiktok-streak-control-center/blob/main/docs/tutorial/intro.png)
 
 # ✦ Streak Control Center
 
@@ -8,7 +6,21 @@
 
 Made by **Dorrmant** · MIT licensed
 
-</div>
+---
+
+## Table of contents
+
+- [Features](#features)
+- [Installation](#-installation)
+- [Usage](#-usage)
+- [Configuration](#configuration)
+- [Troubleshooting](#troubleshooting)
+- [Security](#security)
+- [Disclaimer](#disclaimer)
+- [Contributing](#contributing)
+- [License](#license)
+
+---
 
 ## Features
 
@@ -16,42 +28,41 @@ Made by **Dorrmant** · MIT licensed
 - **Live logs everywhere:** the terminal and both dashboards stream what the bot is doing, color-coded (errors, waits, successes).
 - **Password-protected dashboards**, generated on first run.
 - **Resilient navigation:** retries with back-off when TikTok answers with a `403`, and keeps the browser session alive between runs.
-- Start / stop the bot, open TikTok to log in, and edit usernames, message and timings without touching files.
-
-<div align="center">
-
-<img src="docs/tutorial/all-steps-overview.png" alt="All tutorial steps at a glance">
-
-</div>
+- **No file editing needed:** start / stop the bot, open TikTok to log in, and edit usernames, message and timings from the menu or dashboard.
 
 ---
 
 # 📦 Installation
 
-Three steps (Install 1–3). Everything below was tested on a clean copy of the project.
+Installation takes three steps. Everything below was tested on a clean copy of the project.
 
-<table>
-<tr><td width="33%" align="center"><img src="docs/tutorial/install-1-check-requirements.png" alt="Install 1 – Check requirements"></td><td width="33%" align="center"><img src="docs/tutorial/install-2-download-the-project.png" alt="Install 2 – Download the project"></td><td width="33%" align="center"><img src="docs/tutorial/install-3-install-it.png" alt="Install 3 – Install it"></td></tr>
-</table>
+## 1. Check requirements
 
-## Requirements
+| Requirement | Details |
+|---|---|
+| Operating system | **Linux** (tested on Linux Mint), **Windows 10/11** (added, lightly tested), macOS (should work) |
+| Python | 3.9 or newer. Linux: `sudo apt install python3-venv`. Windows: install from python.org and tick *Add to PATH* |
+| Browser | Google Chrome or Chromium installed |
 
-- **Linux** (tested on Linux Mint), **Windows 10/11** (added, lightly tested) and macOS (should work).
-- Python 3.9+ (Linux: `sudo apt install python3-venv`; Windows: install from python.org and tick *Add to PATH*)
-- Google Chrome or Chromium installed
+## 2. Download the project
 
-## Install
+- **Windows:** on GitHub choose **Code → Download ZIP**, then unzip it.
+- **Linux / macOS:**
 
-**Windows:** download the ZIP from GitHub (Code → Download ZIP), unzip it, double-click **`install.bat`**, then **`run.bat`**. Use Windows Terminal or PowerShell for the best colors.
+  ```bash
+  git clone https://github.com/dorrmant/tiktok-streak-control-center.git
+  cd tiktok-streak-control-center
+  ```
 
-**Linux / macOS:**
+## 3. Install and run it
 
-```bash
-git clone https://github.com/dorrmant/tiktok-streak-control-center.git
-cd tiktok-streak-control-center
-bash install.sh
-bash run.sh
-```
+- **Windows:** double-click **`install.bat`**, then **`run.bat`**. Use Windows Terminal or PowerShell for the best colors.
+- **Linux / macOS:**
+
+  ```bash
+  bash install.sh
+  bash run.sh
+  ```
 
 The first run creates `config.json` with a random dashboard password. It is shown in the terminal menu.
 
@@ -59,42 +70,51 @@ The first run creates `config.json` with a random dashboard password. It is show
 
 # 🚀 Usage
 
-Nine steps (Usage 1–9) from first launch to your phone.
+From first launch to controlling the bot from your phone.
 
-<table>
-<tr><td width="33%" align="center"><img src="docs/tutorial/usage-1-start-the-app.png" alt="Usage 1 – Start the app"></td><td width="33%" align="center"><img src="docs/tutorial/usage-2-open-dashboard-and-log-in.png" alt="Usage 2 – Open the dashboard and log in"></td><td width="33%" align="center"><img src="docs/tutorial/usage-3-meet-your-dashboard.png" alt="Usage 3 – Meet your dashboard"></td></tr>
-<tr><td width="33%" align="center"><img src="docs/tutorial/usage-4-log-in-to-tiktok.png" alt="Usage 4 – Log in to TikTok"></td><td width="33%" align="center"><img src="docs/tutorial/usage-5-add-friends-and-message.png" alt="Usage 5 – Add friends and message"></td><td width="33%" align="center"><img src="docs/tutorial/usage-6-set-timing-and-save.png" alt="Usage 6 – Set timing and save"></td></tr>
-<tr><td width="33%" align="center"><img src="docs/tutorial/usage-7-start-the-bot.png" alt="Usage 7 – Start the bot"></td><td width="33%" align="center"><img src="docs/tutorial/usage-8-stop-the-bot.png" alt="Usage 8 – Stop the bot"></td><td width="33%" align="center"><img src="docs/tutorial/usage-9-use-it-on-your-phone.png" alt="Usage 9 – Use it on your phone"></td></tr>
-</table>
+## Quick start
 
-## In short
+1. **Start the app** with `run.bat` (Windows) or `bash run.sh` (Linux / macOS). The terminal menu appears.
+2. **Log in to TikTok once.** Choose **5 · Open TikTok / login** and sign in by hand. The session is saved in a local browser profile, so you only need to do this once.
+3. **Configure the bot.** Choose **8** (or use the web dashboard) to set your usernames, message, timing and repeat interval, then save.
+4. **Start the bot.** Choose **3 · Start bot**. Watch progress in **9 · Live logs** or on the dashboard.
+5. **Stop the bot** any time with **4 · Stop bot**.
+6. **Open a dashboard:**
+   - PC: `http://127.0.0.1:8765`
+   - Phone (same Wi-Fi): `http://<your-LAN-IP>:8766`
 
-1. In the menu choose **5 · Open TikTok / login** and log in once by hand. The session is saved in a local browser profile.
-2. Choose **8** (or use the web dashboard) to set your usernames, message and repeat interval.
-3. Choose **3 · Start bot**. Watch progress in **9 · Live logs** or on the dashboard.
-4. Open `http://127.0.0.1:8765` on your PC, or `http://<your-LAN-IP>:8766` on your phone (same Wi-Fi).
+   Log in with the dashboard password shown in the terminal menu. Use option **6 · Show web URLs** to see your exact addresses.
 
-| Key | Action | Key | Action |
-|---|---|---|---|
-| 1 | Bot status | 6 | Show web URLs |
-| 2 | View configuration | 7 | Check ports |
-| 3 | Start bot | 8 | Edit message / interval / users |
-| 4 | Stop bot | 9 | Live logs (`x` + Enter to go back) |
-| 5 | Open TikTok / login | 0 | Exit |
+## Menu reference
+
+| Key | Action              | Key | Action                             |
+|-----|---------------------|-----|------------------------------------|
+| 1   | Bot status          | 6   | Show web URLs                      |
+| 2   | View configuration  | 7   | Check ports                        |
+| 3   | Start bot           | 8   | Edit message / interval / users    |
+| 4   | Stop bot            | 9   | Live logs (`x` + Enter to go back) |
+| 5   | Open TikTok / login | 0   | Exit                               |
 
 ---
 
 ## Configuration
 
-Copy nothing by hand: `config.json` is created automatically. See [`config.example.json`](config.example.json) for the fields. `config.json` holds your dashboard password and is git-ignored — **never commit it.**
+`config.json` is created automatically, so there is nothing to copy by hand. See [`config.example.json`](config.example.json) for the available fields.
 
-Want to use your own bot instead of the bundled one? Put its path in `bot_source`. It must expose `bot_worker(config, stop_event)` and `open_tiktok(config, wait_for_login=True)`.
+> **Warning:** `config.json` holds your dashboard password and is git-ignored. **Never commit it.**
+
+**Using your own bot:** put its path in `bot_source`. It must expose:
+
+- `bot_worker(config, stop_event)`
+- `open_tiktok(config, wait_for_login=True)`
 
 ## Troubleshooting
 
-- **HTTP 403 / "Access denied" on profiles:** TikTok's anti-bot layer. Log in first (option 5), disable any VPN, raise "Profile-load wait" to 8–10 s, and avoid very short intervals. The bot retries automatically, but it cannot bypass a blocked IP.
-- **"Could not connect to Chromium":** close other Chrome windows that use the bot profile, or check `debug_port` (default `9222`).
-- **Phone can't open the dashboard:** use the LAN IP from the menu, and allow ports 8765/8766 in your firewall.
+| Problem | What to do |
+|---|---|
+| **HTTP 403 / "Access denied" on profiles** | This is TikTok's anti-bot layer. Log in first (option 5), disable any VPN, raise "Profile-load wait" to 8–10 s, and avoid very short intervals. The bot retries automatically, but it cannot bypass a blocked IP. |
+| **"Could not connect to Chromium"** | Close other Chrome windows that use the bot profile, or check `debug_port` (default `9222`). |
+| **Phone can't open the dashboard** | Use the LAN IP from the menu (option 6) and allow ports 8765 and 8766 in your firewall. |
 
 ## Security
 
@@ -112,9 +132,3 @@ Issues and pull requests are welcome. Please keep personal data (usernames, pass
 ## License
 
 [MIT](LICENSE) © 2026 Dorrmant
-
----
-
-
-
-</div>
