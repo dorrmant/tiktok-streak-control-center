@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 680" width="1280" height="680">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b0618"/>
+      <stop offset="0.6" stop-color="#140a2e"/>
+      <stop offset="1" stop-color="#07131f"/>
+    </linearGradient>
+    <linearGradient id="neon" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#00f0ff"/>
+      <stop offset="1" stop-color="#ff2bd6"/>
+    </linearGradient>
+    <linearGradient id="flame" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#ff2bd6"/>
+      <stop offset="1" stop-color="#ffd24a"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="0.15" cy="0.2" r="0.6">
+      <stop offset="0" stop-color="#00f0ff" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#00f0ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="0.9" cy="0.85" r="0.6">
+      <stop offset="0" stop-color="#ff2bd6" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#ff2bd6" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.045" stroke-width="1"/>
+    </pattern>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softglow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#000" flood-opacity="0.55"/>
+    </filter>
+    <clipPath id="phoneClip"><rect x="985" y="215" width="210" height="390" rx="22"/></clipPath>
+  </defs>
+
+  <!-- background -->
+  <rect width="1280" height="680" fill="url(#bg)"/>
+  <rect width="1280" height="680" fill="url(#grid)"/>
+  <rect width="1280" height="680" fill="url(#glowA)"/>
+  <rect width="1280" height="680" fill="url(#glowB)"/>
+
+  <!-- header: flame mark + title -->
+  <g transform="translate(64,52)" filter="url(#glow)">
+    <path d="M30 0 C34 16 52 24 52 46 C52 62 41 72 30 72 C19 72 8 62 8 46 C8 34 15 28 19 18 C22 28 26 30 28 30 C30 22 30 10 30 0 Z" fill="url(#flame)"/>
+    <path d="M30 34 C32 42 40 46 40 56 C40 63 35 67 30 67 C25 67 20 63 20 56 C20 50 26 46 30 34 Z" fill="#0b0618" fill-opacity="0.55"/>
+  </g>
+  <text x="136" y="92" font-family="'Segoe UI','DejaVu Sans',Arial,sans-serif" font-size="50" font-weight="800" letter-spacing="3" fill="url(#neon)" filter="url(#softglow)">STREAK CONTROL CENTER</text>
+  <text x="138" y="128" font-family="'Segoe UI','DejaVu Sans',Arial,sans-serif" font-size="21" fill="#b9b3d6" letter-spacing="1">Terminal menu  ·  PC dashboard  ·  Phone dashboard  —  one backend</text>
+  <rect x="138" y="146" width="300" height="3" rx="1.5" fill="url(#neon)" filter="url(#softglow)"/>
+
+  <!-- ============ TERMINAL ============ -->
+  <g filter="url(#shadow)">
+    <rect x="60" y="215" width="390" height="390" rx="14" fill="#0a0f1a" stroke="#00f0ff" stroke-opacity="0.7" stroke-width="1.5"/>
+  </g>
+  <path d="M60 229 a14 14 0 0 1 14 -14 H436 a14 14 0 0 1 14 14 V247 H60 Z" fill="#111a2b"/>
+  <circle cx="84" cy="231" r="6" fill="#ff5f57"/>
+  <circle cx="104" cy="231" r="6" fill="#febc2e"/>
+  <circle cx="124" cy="231" r="6" fill="#28c840"/>
+  <text x="255" y="236" text-anchor="middle" font-family="'DejaVu Sans Mono','Consolas',monospace" font-size="13" fill="#7f8fb0">streak — menu</text>
+
+  <g font-family="'DejaVu Sans Mono','Consolas',Menlo,monospace" font-size="16">
+    <text x="84" y="285" fill="#00f0ff" font-weight="700" filter="url(#softglow)">✦ STREAK CONTROL CENTER</text>
+    <text x="84" y="305" fill="#3a4a6b">─────────────────────────</text>
+    <text x="84" y="334" fill="#ff2bd6">1</text><text x="108" y="334" fill="#d7def0">Bot status</text>
+    <text x="84" y="360" fill="#ff2bd6">2</text><text x="108" y="360" fill="#d7def0">View configuration</text>
+    <text x="84" y="386" fill="#ff2bd6">3</text><text x="108" y="386" fill="#39ff88" font-weight="700">Start bot</text>
+    <text x="84" y="412" fill="#ff2bd6">4</text><text x="108" y="412" fill="#d7def0">Stop bot</text>
+    <text x="84" y="438" fill="#ff2bd6">5</text><text x="108" y="438" fill="#d7def0">Open TikTok / login</text>
+    <text x="84" y="464" fill="#ff2bd6">6</text><text x="108" y="464" fill="#d7def0">Show web URLs</text>
+    <text x="84" y="490" fill="#ff2bd6">7</text><text x="108" y="490" fill="#d7def0">Check ports</text>
+    <text x="84" y="516" fill="#ff2bd6">8</text><text x="108" y="516" fill="#d7def0">Edit message / interval</text>
+    <text x="84" y="542" fill="#ff2bd6">9</text><text x="108" y="542" fill="#d7def0">Live logs</text>
+    <text x="84" y="568" fill="#ff2bd6">0</text><text x="108" y="568" fill="#d7def0">Exit</text>
+    <text x="84" y="594" fill="#00f0ff">&gt; </text><rect x="106" y="581" width="9" height="16" fill="#00f0ff"/>
+  </g>
+
+  <!-- ============ PC DASHBOARD ============ -->
+  <g filter="url(#shadow)">
+    <rect x="480" y="215" width="470" height="390" rx="14" fill="#0e0a1f" stroke="#ff2bd6" stroke-opacity="0.7" stroke-width="1.5"/>
+  </g>
+  <path d="M480 229 a14 14 0 0 1 14 -14 H936 a14 14 0 0 1 14 14 V247 H480 Z" fill="#171030"/>
+  <circle cx="504" cy="231" r="6" fill="#ff5f57"/>
+  <circle cx="524" cy="231" r="6" fill="#febc2e"/>
+  <circle cx="544" cy="231" r="6" fill="#28c840"/>
+  <rect x="580" y="221" width="280" height="20" rx="10" fill="#0b0618"/>
+  <text x="720" y="236" text-anchor="middle" font-family="'DejaVu Sans Mono','Consolas',monospace" font-size="12" fill="#8f86b8">127.0.0.1:8765</text>
+
+  <!-- status row -->
+  <text x="504" y="285" font-family="'Segoe UI','DejaVu Sans',Arial,sans-serif" font-size="20" font-weight="700" fill="#ffffff">Dashboard</text>
+  <rect x="820" y="266" width="106" height="28" rx="14" fill="#39ff88" fill-opacity="0.15" stroke="#39ff88" stroke-width="1.2"/>
+  <circle cx="838" cy="280" r="5" fill="#39ff88" filter="url(#softglow)"/>
+  <text x="850" y="285" font-family="'Segoe UI','DejaVu Sans',Arial,sans-serif" font-size="13" font-weight="700" fill="#39ff88">RUNNING</text>
+
+  <!-- stat cards -->
+  <g font-family="'Segoe UI','DejaVu Sans',Arial,sans-serif">
+    <rect x="504" y="310" width="132" height="76" rx="10" fill="#1a1238" stroke="#00f0ff" stroke-opacity="0.35"/>
+    <text x="518" y="334" font-size="12" fill="#8f86b8">STREAK</text>
+    <text x="518" y="370" font-size="32" font-weight="800" fill="#ffd24a" filter="url(#softglow)">128</text>
+    <rect x="646" y="310" width="132" height="76" rx="10" fill="#1a1238" stroke="#ff2bd6" stroke-opacity="0.35"/>
+    <text x="660" y="334" font-size="12" fill="#8f86b8">SENT TODAY</text>
+    <text x="660" y="370" font-size="32" font-weight="800" fill="#ff2bd6" filter="url(#softglow)">12</text>
+    <rect x="788" y="310" width="138" height="76" rx="10" fill="#1a1238" stroke="#39ff88" stroke-opacity="0.35"/>
+    <text x="802" y="334" font-size="12" fill="#8f86b8">NEXT RUN</text>
+    <text x="802" y="370" font-size="32" font-weight="800" fill="#39ff88" filter="url(#softglow)">04:32</text>
+  </g>
+
+  <!-- buttons -->
+  <g font-family="'Segoe UI','DejaVu Sans',Arial,sans-serif" font-size="14" font-weight="700">
+    <rect x="504" y="402" width="100" height="32" rx="8" fill="#39ff88" fill-opacity="0.18" stroke="#39ff88"/>
+    <text x="554" y="423" text-anchor="middle" fill="#39ff88">Start</text>
+    <rect x="614" y="402" width="100" height="32" rx="8" fill="#ff4d6d" fill-opacity="0.18" stroke="#ff4d6d"/>
+    <text x="664" y="423" text-anchor="middle" fill="#ff4d6d">Stop</text>
+    <rect x="724" y="402" width="202" height="32" rx="8" fill="#00f0ff" fill-opacity="0.12" stroke="#00f0ff"/>
+    <text x="825" y="423" text-anchor="middle" fill="#00f0ff">Open TikTok / login</text>
+  </g>
+
+  <!-- live logs -->
+  <rect x="504" y="448" width="422" height="140" rx="10" fill="#070412" stroke="#ffffff" stroke-opacity="0.08"/>
+  <text x="518" y="468" font-family="'Segoe UI','DejaVu Sans',Arial,sans-serif" font-size="11" font-weight="700" letter-spacing="2" fill="#8f86b8">LIVE LOGS</text>
+  <g font-family="'DejaVu Sans Mono','Consolas',monospace" font-size="12.5">
+    <text x="518" y="490" fill="#39ff88">[21:09:02] ✔ message sent</text>
+    <text x="518" y="510" fill="#d7def0">[21:09:05] opening next profile…</text>
+    <text x="518" y="530" fill="#ffd24a">[21:09:11] · waiting 8s for page load</text>
+    <text x="518" y="550" fill="#ff4d6d">[21:09:20] 403 — retrying with back-off</text>
+    <text x="518" y="570" fill="#39ff88">[21:09:34] ✔ message sent</text>
+  </g>
+
+  <!-- ============ PHONE ============ -->
+  <g filter="url(#shadow)">
+    <rect x="975" y="205" width="230" height="410" rx="32" fill="#0a0716" stroke="#00f0ff" stroke-width="2" stroke-opacity="0.8"/>
+  </g>
+  <rect x="985" y="215" width="210" height="390" rx="24" fill="#120b28"/>
+  <g clip-path="url(#phoneClip)">
+    <rect x="1050" y="219" width="80" height="16" rx="8" fill="#0a0716"/>
+    <text x="1004" y="266" font-family="'Segoe UI','DejaVu Sans',Arial,sans-serif" font-size="16" font-weight="700" fill="#ffffff">Streak</text>
+    <rect x="1112" y="252" width="68" height="22" rx="11" fill="#39ff88" fill-opacity="0.15" stroke="#39ff88"/>
+    <circle cx="1126" cy="263" r="4" fill="#39ff88"/>
+    <text x="1136" y="267" font-family="'Segoe UI','DejaVu Sans',Arial,sans-serif" font-size="10" font-weight="700" fill="#39ff88">LIVE</text>
+
+    <rect x="1004" y="290" width="172" height="76" rx="12" fill="#1a1238" stroke="#ffd24a" stroke-opacity="0.4"/>
+    <text x="1018" y="312" font-family="'Segoe UI','DejaVu Sans',Arial,sans-serif" font-size="11" fill="#8f86b8">STREAK DAYS</text>
+    <text x="1018" y="350" font-family="'Segoe UI','DejaVu Sans',Arial,sans-serif" font-size="34" font-weight="800" fill="#ffd24a" filter="url(#softglow)">128</text>
+
+    <rect x="1004" y="378" width="82" height="38" rx="10" fill="#39ff88" fill-opacity="0.18" stroke="#39ff88"/>
+    <text x="1045" y="402" text-anchor="middle" font-family="'Segoe UI','DejaVu Sans',Arial,sans-serif" font-size="13" font-weight="700" fill="#39ff88">Start</text>
+    <rect x="1094" y="378" width="82" height="38" rx="10" fill="#ff4d6d" fill-opacity="0.18" stroke="#ff4d6d"/>
+    <text x="1135" y="402" text-anchor="middle" font-family="'Segoe UI','DejaVu Sans',Arial,sans-serif" font-size="13" font-weight="700" fill="#ff4d6d">Stop</text>
+
+    <rect x="1004" y="430" width="172" height="150" rx="12" fill="#070412" stroke="#ffffff" stroke-opacity="0.08"/>
+    <text x="1016" y="450" font-family="'Segoe UI','DejaVu Sans',Arial,sans-serif" font-size="10" font-weight="700" letter-spacing="2" fill="#8f86b8">LOGS</text>
+    <g font-family="'DejaVu Sans Mono','Consolas',monospace" font-size="10.5">
+      <text x="1016" y="472" fill="#39ff88">✔ message sent</text>
+      <text x="1016" y="492" fill="#d7def0">next profile…</text>
+      <text x="1016" y="512" fill="#ffd24a">· waiting 8s</text>
+      <text x="1016" y="532" fill="#ff4d6d">403 · retrying</text>
+      <text x="1016" y="552" fill="#39ff88">✔ message sent</text>
+    </g>
+  </g>
+  <text x="1090" y="654" text-anchor="middle" font-family="'DejaVu Sans Mono','Consolas',monospace" font-size="12" fill="#6c648f">:8766</text>
+
+  <!-- footer -->
+  <text x="60" y="654" font-family="'Segoe UI','DejaVu Sans',Arial,sans-serif" font-size="14" fill="#8f86b8" letter-spacing="1">Made by <tspan fill="#00f0ff" font-weight="700">Dorrmant</tspan>  ·  MIT licensed</text>
+  <text x="715" y="654" text-anchor="middle" font-family="'DejaVu Sans Mono','Consolas',monospace" font-size="12" fill="#6c648f">:8765</text>
+</svg>
