@@ -1,4 +1,4 @@
-[![Streak Control Center – visual guide](https://github.com/dorrmant/tiktok-streak-control-center/raw/main/docs/tutorial/intro.png)](https://github.com/dorrmant/tiktok-streak-control-center/blob/main/docs/tutorial/intro.png)
+[![Streak Control Center – visual guide](https://github.com/dorrmant/tiktok-streak-control-center/raw/main/docs/tutorial/intro.svg)](https://github.com/dorrmant/tiktok-streak-control-center/blob/main/docs/tutorial/intro.svg)
 
 # ✦ Streak Control Center
 
